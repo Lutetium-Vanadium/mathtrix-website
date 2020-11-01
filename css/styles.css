@@ -1,0 +1,147 @@
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: aliceblue;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex.-rev {
+  flex-direction: row-reverse;
+}
+
+nav {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+section {
+  padding: 0 10%;
+}
+
+.nav-logo {
+  width: 3.5rem;
+  border-radius: 50%;
+}
+
+.nav-link {
+  font-size: 1.3rem;
+  margin: 1vw;
+  max-height: 1.3rem;
+}
+
+.mathtrix-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 9rem auto;
+  margin-bottom: 0;
+}
+
+.mathtrix-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 9rem 0;
+}
+
+.mathtrix-logo {
+  width: 24vw;
+  max-width: 40vh;
+  border-radius: 50%;
+}
+
+.mathtrix-header h1 {
+  font-family: azonix;
+  font-size: 8rem;
+  font-weight: 800;
+  letter-spacing: 10px;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.about {
+  font-size: 1.3rem;
+  max-width: 900px;
+}
+
+.section {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.evt0 {
+  background-color: #e5d272;
+}
+.evt1 {
+  background-color: #c7c970;
+}
+.evt2 {
+  background-color: #a9cc72;
+}
+.evt3 {
+  background-color: #60a091;
+}
+.evt4 {
+  background-color: #3a7491;
+}
+
+.flex-1 {
+  flex: 1;
+  padding: 2rem;
+}
+
+header {
+  padding: 4rem 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header img {
+  width: 24vw;
+  max-width: 40vh;
+  border-radius: 50%;
+}
+
+.event-header {
+  font-family: azonix;
+  font-weight: 600;
+  letter-spacing: 0.03rem;
+  margin: 2rem 0;
+}
+
+.detail {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.5rem 0;
+  align-items: center;
+}
+
+.detail img {
+  max-height: 1.9rem;
+  margin-right: 0.5rem;
+}
+
+.text {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+.section-heading {
+  margin-bottom: 1.5rem;
+}
