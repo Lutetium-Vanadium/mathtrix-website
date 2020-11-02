@@ -1,7 +1,8 @@
 body {
   height: 100vh;
   width: 100%;
-  background-color: aliceblue;
+  background-color: #01394a;
+  color: whitesmoke;
 }
 
 .flex {
@@ -21,6 +22,7 @@ section {
 
 .nav-logo {
   height: 3.5rem;
+  filter: grayscale() brightness(750%);
 }
 
 .nav-link {
@@ -42,7 +44,10 @@ section {
 .mathtrix-header img {
   max-width: 100%;
   max-height: 10rem;
-  filter: grayscale() brightness(0);
+}
+
+.mathtrix-header h3 {
+  color: #DE5430;
 }
 
 .mathtrix-details {
@@ -68,7 +73,7 @@ section {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 .about {
@@ -81,19 +86,24 @@ h3 {
 }
 
 .evt0 {
-  background-color: #e5d272;
+  background-color: #e5bb50;
+  color: black;
 }
 .evt1 {
-  background-color: #c7c970;
+  background-color: #e58c39;
+  color: black;
 }
 .evt2 {
-  background-color: #a9cc72;
+  background-color: #5fbf9a;
+  color: black;
 }
 .evt3 {
-  background-color: #60a091;
+  background-color: #2ca593;
+  color: black;
 }
 .evt4 {
-  background-color: #3a7491;
+  background-color: #4386a8;
+  color: black;
 }
 
 .flex-1 {
@@ -136,7 +146,7 @@ header img {
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 .text {
