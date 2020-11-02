@@ -85,25 +85,31 @@ h3 {
   padding-bottom: 8rem;
 }
 
+.evt {
+  background-position: center;
+  background-size: cover;
+  color: black;
+}
+
 .evt0 {
   background-color: #e5bb50;
-  color: black;
+  background-image: url('../assets/yellow.png');
 }
 .evt1 {
   background-color: #e58c39;
-  color: black;
+  background-image: url('../assets/orange.png');
 }
 .evt2 {
   background-color: #5fbf9a;
-  color: black;
+  background-image: url('../assets/green.png');
 }
 .evt3 {
   background-color: #2ca593;
-  color: black;
+  background-image: url('../assets/teal.png');
 }
 .evt4 {
   background-color: #4386a8;
-  color: black;
+  background-image: url('../assets/blue.png');
 }
 
 .flex-1 {
