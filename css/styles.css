@@ -46,10 +46,13 @@ section {
 }
 
 .mathtrix-details {
+  margin: 9rem 0;
+}
+
+.mathrix-details > div {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 9rem 0;
 }
 
 .mathtrix-logo {
@@ -69,7 +72,6 @@ h3 {
 }
 
 .about {
-  font-size: 1.3rem;
   max-width: 900px;
 }
 
@@ -116,7 +118,8 @@ header img {
   font-family: azonix;
   font-weight: 600;
   letter-spacing: 0.03rem;
-  margin: 2rem 0;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .detail {
@@ -132,8 +135,11 @@ header img {
   margin-right: 0.5rem;
 }
 
-.text {
+p {
   font-size: 1.3rem;
+}
+
+.text {
   margin: 1rem 0;
 }
 
