@@ -10,10 +10,6 @@ body {
   align-items: center;
 }
 
-.flex.-rev {
-  flex-direction: row-reverse;
-}
-
 nav {
   width: 100%;
   padding: 1rem 0;
@@ -24,8 +20,7 @@ section {
 }
 
 .nav-logo {
-  width: 3.5rem;
-  border-radius: 50%;
+  height: 3.5rem;
 }
 
 .nav-link {
@@ -44,6 +39,12 @@ section {
   margin-bottom: 0;
 }
 
+.mathtrix-header img {
+  max-width: 100%;
+  max-height: 10rem;
+  filter: grayscale() brightness(0);
+}
+
 .mathtrix-details {
   display: flex;
   justify-content: center;
@@ -54,7 +55,6 @@ section {
 .mathtrix-logo {
   width: 24vw;
   max-width: 40vh;
-  border-radius: 50%;
 }
 
 .mathtrix-header h1 {
@@ -110,7 +110,6 @@ header {
 header img {
   width: 24vw;
   max-width: 40vh;
-  border-radius: 50%;
 }
 
 .event-header {
