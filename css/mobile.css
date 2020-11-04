@@ -1,4 +1,8 @@
 @media screen and (max-width: 750px) {
+  body::before {
+    background-size: 84%;
+  }
+
   .flex {
     flex-direction: column;
   }
