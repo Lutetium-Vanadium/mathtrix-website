@@ -1,10 +1,12 @@
 .event-links {
   position: relative;
+  max-height: 2rem;
+  padding: 0.35rem 0;
 }
 
 .event-links-dropdown {
   position: absolute;
-  top: 120%;
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   transition: 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
