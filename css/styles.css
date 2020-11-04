@@ -35,7 +35,7 @@ section {
 }
 
 .nav-logo {
-  height: 3.5rem;
+  height: 4.5rem;
   filter: grayscale() brightness(750%);
 }
 
@@ -57,11 +57,12 @@ section {
 
 .mathtrix-header img {
   max-width: 100%;
-  max-height: 10rem;
+  max-height: 18rem;
 }
 
 .mathtrix-header h3 {
   color: #DE5430;
+  font-size: 2.2rem;
 }
 
 .mathtrix-details {
@@ -94,6 +95,12 @@ h3 {
   max-width: 900px;
 }
 
+.about h3 {
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-family: azonix;
+}
+
 .section {
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -106,15 +113,15 @@ h3 {
 }
 
 .evt0 {
-  background-color: #e5bb50;
-  background-image: url('../assets/yellow.png');
-}
-.evt1 {
   background-color: #e58c39;
   background-image: url('../assets/orange.png');
 }
+.evt1 {
+  background-color: #e5bb50;
+  background-image: url('../assets/yellow.png');
+}
 .evt2 {
-  background-color: #5fbf9a;
+  background-color: #adcc41;
   background-image: url('../assets/green.png');
 }
 .evt3 {
@@ -162,11 +169,12 @@ header img {
 
 .detail img {
   max-height: 1.9rem;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
 p {
   font-size: 1.4rem;
+  line-height: 1.8rem;
 }
 
 .text {
@@ -179,4 +187,17 @@ h2 {
 
 .section-heading {
   margin-bottom: 1.5rem;
+}
+
+.registration {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.inline {
+  display: inline;
+}
+
+.invert {
+  filter: invert(93%);
 }

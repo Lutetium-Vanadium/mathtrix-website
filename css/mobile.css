@@ -11,9 +11,18 @@
     margin-top: 3rem;
   }
 
+  .mathtrix-header h3 {
+    font-size: 1.4rem;
+  }
+
   .mathtrix-details {
     margin-top: 3rem;
     margin-bottom: 3rem;
+  }
+
+  .mathtrix-details h3 {
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
   }
 
   h2 {
@@ -32,6 +41,11 @@
   .section {
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+
+  .registration {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   p {
