@@ -43,6 +43,10 @@
     padding-bottom: 3rem;
   }
 
+  .schedule-event {
+    max-width: 40vw;
+  }
+
   .registration {
     padding-top: 0;
     padding-bottom: 0;

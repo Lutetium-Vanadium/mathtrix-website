@@ -70,6 +70,12 @@ section {
   font-size: 2.2rem;
 }
 
+.mathtrix-header h4 {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  color: #cccccc;
+}
+
 .mathtrix-details {
   margin: 9rem 0;
 }
@@ -199,4 +205,42 @@ h2 {
 
 .invert {
   filter: invert(93%);
+}
+
+.azonix {
+  font-family: azonix;
+}
+
+.schedule {
+  width: 1.5ch;
+  background: #f7cc4d;
+  margin: 0 auto;
+}
+
+.schedule-event {
+  width: max-content;
+  max-width: 30vw;
+  margin-bottom: 2rem;
+}
+
+.schedule-event:nth-child(odd) {
+  transform: translateX(calc(1.5ch + 1.5rem));
+}
+
+.schedule-event:nth-child(even) {
+  transform: translateX(calc(-1.5rem - 100%));
+  text-align: right;
+}
+
+.schedule-event:last-child {
+  margin: 0;
+}
+
+.schedule-title {
+  color: #f7cc4d;
+}
+
+.schedule-date {
+  color: #DE5430;
+  font-weight: 600;
 }
