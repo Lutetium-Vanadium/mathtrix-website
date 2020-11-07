@@ -1,0 +1,42 @@
+body {
+  padding-bottom: 3rem;
+}
+
+.nav-logo {
+  filter: grayscale() brightness(0%);
+}
+
+.list {
+  list-style-type: disc;
+  padding-left: 1.3rem;
+}
+
+.rules h3 {
+  font-family: azonix;
+  margin-bottom: 0.6rem;
+  font-size: 2rem;
+}
+
+.rules {
+  margin: 2rem 0;
+}
+
+@media screen and (min-width: 750px) {
+  .detail {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  body {
+    padding-bottom: 2rem;
+  }
+
+  .rules h3 {
+    font-size: 1.5rem;
+  }
+
+  .list {
+    padding-left: 1.1rem;
+  }
+}

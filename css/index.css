@@ -1,0 +1,171 @@
+body::before {
+  content: "";
+  background-image: url('../assets/general_bg.png');
+  background-position: center;
+  background-size: 33%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+  z-index: -1;
+}
+
+.nav-logo {
+  filter: grayscale() brightness(750%);
+}
+
+.mathtrix-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 9rem auto;
+  margin-bottom: 0;
+}
+
+.mathtrix-header img {
+  max-width: 100%;
+  max-height: 18rem;
+}
+
+.mathtrix-header h3 {
+  color: #DE5430;
+  font-size: 2.2rem;
+}
+
+.mathtrix-header h4 {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  color: #cccccc;
+}
+
+.mathtrix-details {
+  margin: 9rem 0;
+}
+
+.mathtrix-logo {
+  width: 24vw;
+  max-width: 40vh;
+}
+
+.mathtrix-header h1 {
+  font-family: azonix;
+  font-size: 8rem;
+  font-weight: 800;
+  letter-spacing: 10px;
+}
+
+.about {
+  max-width: 900px;
+}
+
+.about h3 {
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-family: azonix;
+}
+
+.show-more {
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  display: block;
+  width: max-content;
+  border: 2px solid currentColor;
+}
+
+.section {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.section-heading {
+  margin-bottom: 1.5rem;
+}
+
+.registration {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.inline {
+  display: inline;
+}
+
+.invert {
+  filter: invert(93%);
+}
+
+.azonix {
+  font-family: azonix;
+}
+
+.schedule {
+  width: 1.5ch;
+  background: #f7cc4d;
+  margin: 0 auto;
+}
+
+.schedule-event {
+  width: max-content;
+  max-width: 30vw;
+  margin-bottom: 2rem;
+}
+
+.schedule-event:nth-child(odd) {
+  transform: translateX(calc(1.5ch + 1.5rem));
+}
+
+.schedule-event:nth-child(even) {
+  transform: translateX(calc(-1.5rem - 100%));
+  text-align: right;
+}
+
+.schedule-event:last-child {
+  margin: 0;
+}
+
+.schedule-title {
+  color: #f7cc4d;
+}
+
+.schedule-date {
+  color: #DE5430;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 750px) {
+  .mathtrix-header {
+    margin-top: 3rem;
+  }
+
+  .mathtrix-header h3 {
+    font-size: 1.4rem;
+  }
+
+  .mathtrix-details {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .mathtrix-details h3 {
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+  }
+
+  .section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .schedule-event {
+    max-width: 40vw;
+  }
+
+  .registration {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
