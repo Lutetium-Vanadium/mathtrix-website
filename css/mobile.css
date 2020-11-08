@@ -20,7 +20,8 @@
     padding-bottom: 1rem;
   }
 
-  li, p {
+  li,
+  p {
     font-size: 1.1rem;
   }
 }

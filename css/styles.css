@@ -47,23 +47,23 @@ h3 {
 
 .evt0 {
   background-color: #e58c39;
-  background-image: url('../assets/orange.png');
+  background-image: url("../assets/orange.png");
 }
 .evt1 {
   background-color: #e5bb50;
-  background-image: url('../assets/yellow.png');
+  background-image: url("../assets/yellow.png");
 }
 .evt2 {
   background-color: #adcc41;
-  background-image: url('../assets/green.png');
+  background-image: url("../assets/green.png");
 }
 .evt3 {
   background-color: #2ca593;
-  background-image: url('../assets/teal.png');
+  background-image: url("../assets/teal.png");
 }
 .evt4 {
   background-color: #4386a8;
-  background-image: url('../assets/blue.png');
+  background-image: url("../assets/blue.png");
 }
 
 .flex-1 {
@@ -105,7 +105,8 @@ header img {
   margin-right: 1rem;
 }
 
-li, p {
+li,
+p {
   font-size: 1.4rem;
   line-height: 1.8rem;
 }
@@ -117,4 +118,3 @@ li, p {
 h2 {
   font-size: 3.5rem;
 }
-

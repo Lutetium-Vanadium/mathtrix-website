@@ -1,6 +1,6 @@
 body::before {
   content: "";
-  background-image: url('../assets/general_bg.png');
+  background-image: url("../assets/general_bg.png");
   background-position: center;
   background-size: 33%;
   position: absolute;
@@ -32,7 +32,7 @@ body::before {
 }
 
 .mathtrix-header h3 {
-  color: #DE5430;
+  color: #de5430;
   font-size: 2.2rem;
 }
 
@@ -132,7 +132,7 @@ body::before {
 }
 
 .schedule-date {
-  color: #DE5430;
+  color: #de5430;
   font-weight: 600;
 }
 
