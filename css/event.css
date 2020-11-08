@@ -6,6 +6,34 @@ body {
   filter: grayscale() brightness(0%);
 }
 
+.quote-text {
+  margin: 0 auto;
+  width: max-content;
+  text-align: right;
+}
+
+.quote-text .quote {
+  display: block;
+  max-width: 50vw;
+  font-style: italic;
+  font-size: 1.2em;
+  text-align: center;
+}
+.quote-text .quote::before {
+  content: "“";
+}
+.quote-text .quote::after {
+  content: "„";
+}
+
+.quote-text .author {
+  display: block;
+  max-width: 50vw;
+}
+.quote-text .author::before {
+  content: "— ";
+}
+
 .list {
   list-style-type: disc;
   padding-left: 1.3rem;
