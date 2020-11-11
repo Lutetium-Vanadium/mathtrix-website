@@ -3,6 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The beloved math-centric fest organised by National Public School,
+Indiranagar, Mathtrix has seen students of various schools come
+together to compete over the years, putting on display the different
+skills they possess."
+    />
+    <meta
+      name="keywords"
+      content="Mathtrix,Mathtrix 2020,nps inr,
+        National Public School Indiranagar,mathfest,nps,npsi,mathrix,mathrix 2020,nps mathfest"
+    />
+
     <title>Mathtrix 2020</title>
     <link rel="shortcut icon" type="image/favicon" href="favicons/index.ico" />
     <link rel="stylesheet" href="./css/reset.css" />
@@ -22,6 +35,7 @@
       </nav>
 
       <div class="mathtrix-header">
+        <h1 style="display: none">Mathtrix 2020</h1>
         <img src="assets/mathtrix.png" alt="Mathtrix Logo" />
         <h3>Explore. Excite. Equate.</h3>
         <h4>20th November 2020</h4>
@@ -324,4 +338,28 @@
     </section>
   </body>
   <script src="index.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBDDx4y7ScYCzdr2r937lvhjO6SPqCZ7Yc",
+      authDomain: "shootyourself.firebaseapp.com",
+      databaseURL: "https://shootyourself.firebaseio.com",
+      projectId: "shootyourself",
+      storageBucket: "shootyourself.appspot.com",
+      messagingSenderId: "12306323353",
+      appId: "1:12306323353:web:18dfb0d7e630185fe52508",
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+    const firestore = firebase.firestore();
+
+    firestore
+      .collection("mathtrix")
+      .doc("website_count")
+      .update({
+        count: firebase.firestore.FieldValue.increment(1),
+      });
+  </script>
 </html>
