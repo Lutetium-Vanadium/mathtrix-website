@@ -355,11 +355,23 @@ skills they possess."
 
     const firestore = firebase.firestore();
 
-    firestore
-      .collection("mathtrix")
-      .doc("website_count")
-      .update({
-        count: firebase.firestore.FieldValue.increment(1),
-      });
+    if (localStorage.getItem("seen") != "true") {
+      firestore
+        .collection("mathtrix")
+        .doc("website_count")
+        .update({
+          count: firebase.firestore.FieldValue.increment(1),
+        });
+
+      localStorage.setItem("seen", "true");
+    }
+
+    const getCount = async () => {
+      let doc = await firestore
+        .collection("mathtrix")
+        .doc("website_count")
+        .get();
+      return doc.data();
+    };
   </script>
 </html>
