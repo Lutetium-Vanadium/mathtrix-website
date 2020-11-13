@@ -2,6 +2,6 @@
 
 The source files for mathtrix website
 
-# View
+## View
 
-Open `index.html` in your browser, or go [here](https://lutetium-vanadium.github.io/mathtrix-website/)
+Open `index.html` in your browser, or go [here](https://mathtrix.online)
