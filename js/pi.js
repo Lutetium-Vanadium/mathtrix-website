@@ -81,10 +81,6 @@ const images = events.reduce((obj, evt) => {
 }, {});
 
 // Register handlers to move blob
-const rect = canvas.getBoundingClientRect();
-const deltaX = rect.left;
-const deltaY = rect.top;
-
 const clamp = (value, start, end) => {
   if (value < start) {
     return start;
@@ -96,8 +92,10 @@ const clamp = (value, start, end) => {
 };
 
 const handler = (e) => {
-  const x = (e.clientX - deltaX) / scale - 3;
-  const y = (e.clientY - deltaY) / scale - 3;
+  const rect = canvas.getBoundingClientRect();
+
+  const x = (e.clientX - rect.left) / scale - 3;
+  const y = (e.clientY - rect.top) / scale - 3;
   socket.emit("update:pos", clamp(x, 0, 94), clamp(y, 0, 94));
 };
 
