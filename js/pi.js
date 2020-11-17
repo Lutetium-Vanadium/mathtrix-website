@@ -1,6 +1,6 @@
 let url = "http://192.168.68.106:5000";
 
-if (window.location.hostname === "mathtrix") {
+if (window.location.hostname === "mathtrix.online") {
   url = "https://server.mathtrix.online";
 }
 
