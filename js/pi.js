@@ -1,22 +1,10 @@
 let url = "http://192.168.68.106:5000";
 
 if (window.location.hostname === "mathtrix") {
-  // TODO change to server URL
-  url = "https://example.com";
+  url = "https://server.mathtrix.online";
 }
 
-const socket = io(url);
-
-const canvas = document.getElementById("canvas");
-const w = canvas.getBoundingClientRect().width;
-const h = w;
-
-canvas.width = w;
-canvas.height = h;
-
-const scale = canvas.width / 100;
-const ctx = canvas.getContext("2d");
-
+// All the different blobs they can choose
 const events = [
   "abstraction",
   "desolate-planet",
@@ -25,20 +13,17 @@ const events = [
   "segfault",
 ];
 
-const images = events.reduce((obj, evt) => {
-  let image = new Image(scale * 5, scale * 5);
-  image.src = `favicons/${evt}.png`;
-  obj[evt] = image;
-  return obj;
-}, {});
-
 const insideSpan = document.getElementById("inside");
 const totalSpan = document.getElementById("total");
 const piSpan = document.getElementById("pi");
 
-socket.on("test", console.log);
+let evt = events[Math.floor(Math.random() * events.length)];
+document.getElementById(evt).classList.add("sel");
 
-socket.emit("join", 50, 50, "segfault");
+// Initiate socket
+const socket = io(url);
+
+socket.emit("join", 50, 50, evt);
 
 socket.on("update", (blobs) => {
   ctx.clearRect(0, 0, w, h);
@@ -66,6 +51,36 @@ socket.on("update", (blobs) => {
   }
 });
 
+// Setup canvas to draw
+const canvas = document.getElementById("canvas");
+const w = canvas.getBoundingClientRect().width;
+const h = w;
+
+canvas.width = w;
+canvas.height = h;
+
+const scale = canvas.width / 100;
+const ctx = canvas.getContext("2d");
+
+// Change the event when click on the event
+events.forEach((e) => {
+  document.getElementById(e).addEventListener("click", () => {
+    document.getElementById(evt).classList.remove("sel");
+    document.getElementById(e).classList.add("sel");
+    evt = e;
+    socket.emit("update:evt", e);
+  });
+});
+
+// Load all blob images
+const images = events.reduce((obj, evt) => {
+  let image = new Image(scale * 5, scale * 5);
+  image.src = `favicons/${evt}.png`;
+  obj[evt] = image;
+  return obj;
+}, {});
+
+// Register handlers to move blob
 const rect = canvas.getBoundingClientRect();
 const deltaX = rect.left;
 const deltaY = rect.top;
