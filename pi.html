@@ -50,6 +50,14 @@
             />
             <span>Desolate Planet</span>
           </li>
+          <li
+            id="controller-wrapper"
+            class="direction-control"
+            title="Move to the direction you want to launch in"
+          >
+            <div draggable="true" id="controller" class="control"></div>
+          </li>
+          <button id="launch" class="launch">Launch!</button>
         </ul>
       </div>
       <div class="flex">
@@ -58,8 +66,10 @@
       </div>
       <h3>Value of pi (4 * c / n): <span id="pi">0</span></h3>
     </section>
+    <div></div>
   </body>
   <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
   <script src="js/index.js"></script>
+  <script src="js/draggable.js"></script>
   <script src="js/pi.js"></script>
 </html>

@@ -1,5 +1,6 @@
 body {
   min-height: 100vh;
+  padding-bottom: 2rem;
 }
 
 .box {
@@ -90,9 +91,38 @@ body {
   justify-content: center;
 }
 
+.events .direction-control {
+  width: 12vh;
+  margin: 0 auto;
+  border-radius: 50%;
+  position: relative;
+}
+
+.control {
+  width: 6vh;
+  height: 6vh;
+  position: absolute;
+  border-radius: 50%;
+  top: 3vh;
+  left: 3vh;
+  background: #cccccc69;
+}
+
 h3 {
   margin: 1rem 0;
   width: 100%;
+}
+
+.launch {
+  background: none;
+  outline: none;
+  border: 1.5px solid white;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @media screen and (max-width: 750px) {
@@ -110,5 +140,14 @@ h3 {
 
   .events li {
     min-width: 9em;
+  }
+
+  .events .direction-control {
+    min-width: 0;
+  }
+
+  .launch {
+    left: 0;
+    transform: none;
   }
 }
