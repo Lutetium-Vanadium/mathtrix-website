@@ -44,6 +44,8 @@ socket.on("leave", (id) => {
   delete blobs[id];
 });
 
+let counter = 0;
+
 setInterval(() => {
   ctx.clearRect(0, 0, w, h);
 
@@ -76,7 +78,11 @@ setInterval(() => {
     if (pastPi.length > 250) {
       pastPi.pop();
     }
-    apiSpan.innerText = Math.round(1000 * avg(pastPi)) / 1000;
+    if (counter % 100 == 0) {
+      apiSpan.innerText = Math.round(1000 * avg(pastPi)) / 1000;
+      counter = 1;
+    }
+    counter += 1;
   }
 }, 20);
 
@@ -113,8 +119,10 @@ const images = events.reduce((obj, evt) => {
 
 document.getElementById("launch").addEventListener("click", () => {
   socket.emit("join", evt, getDirection());
-  document.getElementById("launch").remove();
-  document.getElementById("controller-wrapper").remove();
+  const launch = document.getElementById("launch");
+  launch.innerText = "Launched!";
+  launch.classList.add("disabled");
+  document.getElementById("controller-wrapper").classList.add("disabled");
 });
 
 const velocity = w / 100;

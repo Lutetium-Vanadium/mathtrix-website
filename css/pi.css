@@ -98,6 +98,16 @@ body {
   position: relative;
 }
 
+.explanation {
+  position: absolute;
+  top: 100%;
+  font-family: monospace;
+  font-size: 1rem;
+  width: max-content;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .control {
   width: 6vh;
   height: 6vh;
@@ -119,10 +129,15 @@ h3 {
   border: 1.5px solid white;
   color: white;
   padding: 0.5rem 1rem;
-  margin: 1rem 0;
+  margin: 2rem 0;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 750px) {
@@ -143,6 +158,10 @@ h3 {
 
   .events .direction-control {
     min-width: 0;
+  }
+
+  .explanation {
+    max-width: 18vh;
   }
 
   .launch {

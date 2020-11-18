@@ -87,3 +87,8 @@ const clamp = (value, start, end) => {
     return value;
   }
 };
+
+if (window.innerWidth < 750) {
+  const launch = document.getElementById("launch");
+  launch.parentElement.parentElement.appendChild(launch);
+}
