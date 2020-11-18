@@ -18,6 +18,7 @@
   opacity: 0;
   background-color: aliceblue;
   color: black;
+  z-index: 50;
 }
 
 .event-links-dropdown li {

@@ -4,6 +4,7 @@ if (window.location.hostname === "mathtrix.online") {
   url = "https://server.mathtrix.online";
 }
 
+let pastPi = [];
 let blobs = {};
 
 // All the different blobs they can choose
@@ -17,7 +18,8 @@ const events = [
 
 const insideSpan = document.getElementById("inside");
 const totalSpan = document.getElementById("total");
-const piSpan = document.getElementById("pi");
+const cpiSpan = document.getElementById("cpi");
+const apiSpan = document.getElementById("api");
 
 let evt = events[Math.floor(Math.random() * events.length)];
 document.getElementById(evt).classList.add("sel");
@@ -68,7 +70,13 @@ setInterval(() => {
   if (total > 0) {
     totalSpan.innerText = total.toString();
     insideSpan.innerText = numInCircle.toString();
-    piSpan.innerText = (4 * numInCircle) / total;
+    const pi = Math.round((40000 * numInCircle) / total) / 10000;
+    cpiSpan.innerText = pi;
+    pastPi.unshift(pi);
+    if (pastPi.length > 250) {
+      pastPi.pop();
+    }
+    apiSpan.innerText = Math.round(1000 * avg(pastPi)) / 1000;
   }
 }, 20);
 
@@ -132,3 +140,7 @@ class EventBlob {
     }
   }
 }
+
+const avg = (l) => {
+  return l.reduce((avg, el) => avg + el, 0) / l.length;
+};
